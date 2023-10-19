@@ -1,0 +1,109 @@
+import React from "react";
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+
+function Footer() {
+  return (
+    <>
+      <div className="footer">
+        <div className="footer-title">
+          <span className="mT">Mt</span>
+          <span className="learn">Learn</span>
+        </div>
+        <div className="footer-head">
+          <div style={{ padding: "0 50px 0 0" }}>
+            <span className="Abt">About</span>
+            <h3 className="about"
+              style={{
+                fontSize: "14px",
+                fontWeight: "lighter",
+                padding: "0 2px 0 0",
+              }}
+            >
+              Learn more about us
+            </h3>
+          </div>
+          <div style={{ padding: "0 2px 0 10px" }}>
+            <span className="Car">Careers</span>
+            <h3 className="career"
+              style={{
+                fontSize: "14px",
+                fontWeight: "lighter",
+                padding: "0 24px 0 0",
+              }}
+            >
+              Check out the latest jobs opportunities at MtLearn
+            </h3>
+          </div>
+          <div style={{ padding: "0 2px 0 0" }}>
+            <span className="Fol">Follow Us</span>
+            <h3 className="follow"
+              style={{
+                fontSize: "14px",
+                fontWeight: "lighter",
+                padding: "0 24px 0 0",
+                justifyContent: "space-around",
+              }}
+            >
+              <ul>
+                <ol>Facebook</ol>
+                <ol>Instagram</ol>
+                <ol>Twitter</ol>
+                <ol>Linkedin</ol>
+              </ul>
+            </h3>
+          </div>
+          <div style={{ padding: "0 30px 0 50px" }}>
+            <span className="con">Contact Us</span>
+            <h3 className="contact"
+              style={{ 
+                fontSize: "14px",
+                fontWeight: "lighter",
+                padding: "0 21px 0 3px",
+              }}
+            >
+              We'll love to hear from you
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div style={{ background: "#37012a" }}>
+        <div className="right">
+          <span
+            style={{
+              color: "#fff",
+              backgroundColor: "#a09607",
+              borderRadius: "50%",
+              fontSize: "1.4rem",
+              padding: "0 5px 0 5px",
+              position: "center",
+              textAlign: "center",
+            }}
+          >
+            c
+          </span>
+          <div>
+            <span style={{ color: "#fff", paddingLeft: "0.8rem" }}>2023</span>
+            <span style={{ color: "#fff", paddingLeft: "0.8rem" }}>Mt</span>
+            <span style={{ color: "#ffff00" }}>Learn</span>
+          </div>
+          <div className="social">
+            <span style={{ color: "#fff", paddingLeft: "0.4rem" }}>
+              <FaFacebook size={20} />
+            </span>
+            <span style={{ color: "#fff", paddingLeft: "0.4rem" }}>
+              <FaInstagram size={20}/>
+            </span>
+            <span style={{ color: "#fff", paddingLeft: "0.4rem" }}>
+              <FaTwitter size={20}/>
+            </span>
+            <span style={{ color: "#fff", paddingLeft: "0.4rem" }}>
+              <FaLinkedin size={20}/>
+            </span>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default Footer;

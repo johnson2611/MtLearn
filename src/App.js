@@ -1,38 +1,37 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import {BrowserRouter as Router,Route,Link, Switch} from "react-router-dom";
 import Home from "./components/Home";
-import About from "./components/About";
-import Service from "./components/Service";
-import Portfolio from "./components/Portfolio";
-import Contact from "./components/Contact";
+import Courses from "./components/assets/Data/Courses/Courset";
+import Tutorial from "./components/Tutorial";
+import Services from "./components/Services";
+import Footer from "./components/Footer";
+import ScrollToTop from "./components/Scroll";
+// import {useScroll} from 'scroll-behavior';
 
 const App = () => {
-    return(
-        <>
-        <Router>
-            <Navbar/>
-
-            
-            <Switch>
-                <Route path= '/' components = {Home} exact>
-                    <Home/>
-                </Route>
-                <Route path= '/about' components = {About} exact>
-                    <About/>
-                </Route>
-                <Route path= '/service' components = {Service} exact>
-                    <Service/>
-                </Route>
-                <Route path= '/portfolio' components = {Portfolio} exact>
-                    <Portfolio/>
-                </Route>
-                <Route path= '/contact' components = {Contact} exact>
-                    <Contact/>
-                </Route>
-            </Switch>
-       </Router>
-        </>
-    )
-}
-export default App
+  return (
+    <>
+      <Router>
+        <Navbar />
+        <ScrollToTop />
+        <Switch>
+          <Route path="/" components={Home} exact>
+            <Home />
+            <Footer />
+          </Route>
+          <Route path="/Courses" components={Courses} exact>
+            <Courses />
+          </Route>
+          <Route path="/Tutoial" components={Tutorial} exact>
+            <Tutorial />
+          </Route>
+          <Route path="/Services" components={Services} exact>
+            <Services />
+          </Route>
+        </Switch>
+      </Router>
+    </>
+  );
+};
+export default App;
