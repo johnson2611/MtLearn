@@ -1,14 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory} from "react-router-dom";
 import "./navbar.css";
 import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-// import {AiOutlineSearch} from "react-icons/ai"
+import {AiOutlineSearch} from "react-icons/ai"
+
+// import { useMediaQuery } from "react-responsive";
+// import Toggle from "react-toggle";
+
 // import {useScroll} from 'scroll-behavior';
+
 
 const Navbar = ({ handleClick }) => {
   const [winSize, setWinSize] = useState(window.innerWidth);
   const [Mobile, setMobile] = useState(false);
+
+  // const [isDark, setIsDark] = useState(true);
 
   const checkWinSize = () => {
     setWinSize(window.innerWidth);
@@ -16,18 +23,37 @@ const Navbar = ({ handleClick }) => {
   useEffect(() => {
     window.addEventListener("resize", checkWinSize);
   }, [winSize]);
-  const handleClick1 = (e) => {
-    const name = e.target.getAttribute("name");
-    if (name !== undefined || name !== null) {
-      setMobile(false);
-    }
-  };
+
+  const history = useHistory();
+  const logButtonClick = () =>{
+    history.push("/Login");
+  }
+
+  // const systemPrefersDark = useMediaQuery(
+  //   {
+  //     query: "(prefers-color-scheme: dark)",
+  //   },
+  //   undefined,
+  //   (isSystemDark) => setIsDark(isSystemDark)
+  // );
+  // const handleClick1 = (e) => {
+  //   const name = e.target.getAttribute("name");
+  //   if (name !== undefined || name !== null) {
+  //     setMobile(false);
+  //   }
+  // };
   return (
     <nav className="navbar">
       <h3 className="logo">
         <span className="mt">Mt</span>
         <span className="learn">Learn</span>
       </h3>
+      {/* <Toggle
+      checked={isDark}
+      onChange={({ target }) => setIsDark(target.checked)}
+      icons={{ checked: "🌙", unchecked: "🔆" }}
+      aria-label="Dark mode toggle"
+    /> */}
 
       <ul
         className={
@@ -37,12 +63,12 @@ const Navbar = ({ handleClick }) => {
               : "nav-links"
             : "nav-links"
         }
-        onClick={handleClick1}
+        // onClick={handleClick1}
       >
         <div class="box">
           {/* search icon */}
-          {/* <AiOutlineSearch className="scr"/> */}
-          <input className="search" placeholder="search..." spellcheck="false" />
+          <AiOutlineSearch className="scr"/>
+          <input className="search" placeholder="search..." spellcheck="false"  type="text"/>
         </div>
         <NavLink
           exact
@@ -64,7 +90,7 @@ const Navbar = ({ handleClick }) => {
         <NavLink activeClassName="active" to="/Services" name="Services">
           <li>Services</li>
         </NavLink>
-        <button className="btn">Log In </button>
+        <button className="btn" onClick={logButtonClick}>Log In </button>
         {/* <button className="btn">Sign Up</button> */}
       </ul>
       <button className="mobile-menu-icon" onClick={() => setMobile(!Mobile)}>

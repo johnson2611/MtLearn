@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Carousel.css";
+import { FaStar } from "react-icons/fa";
 
 export default function Carousel() {
   const sliderSettings = {
@@ -36,7 +37,21 @@ export default function Carousel() {
             <p className="coursetTitle">{card.title}</p>
             <h2 className="coursetDes">{card.description}</h2>
             <h5 className="coursetPrice">{card.price}</h5>
-            <h5 className="courseRating">{card.rating}</h5>
+            <h5 className="courseRating">
+              {card.rating}
+              <span style={{ color: " #fff000", paddingLeft: "0.4rem" }}>
+                <FaStar size={20} />
+              </span>
+              <span style={{ color: " #fff000", paddingLeft: "0.4rem" }}>
+                <FaStar size={20} />
+              </span>
+              <span style={{ color: " #fff000", paddingLeft: "0.4rem" }}>
+                <FaStar size={20} />
+              </span>
+              <span style={{ color: " #fff000", paddingLeft: "0.4rem" }}>
+                <FaStar size={20} />
+              </span>
+            </h5>
           </div>
         ))}
       </Slider>

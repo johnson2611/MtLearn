@@ -1,11 +1,12 @@
-import prodesign from "./Img/prodesign.png";
-import des from "./Img/des.png";
-import digital from "./Img/digital.jpg";
+import SQL from "./Img/SQL.png";
+import pyR from "./Img/pyR.jpeg";
+import BI from "./Img/BI.jpeg";
+import visual from "./Img/visual.jpeg";
 
 export const AnalyticsData = [
     {
         id: 1,
-        img:des,
+        img:pyR,
         title: "Data Analysis with python or R",
         description: "Learn all you need to know to become an accountant engineer",
         price: '$60.00',
@@ -13,15 +14,15 @@ export const AnalyticsData = [
     },
     {
         id: 2,
-        img:prodesign,
+        img:SQL,
         title: "SQL and Database Management",
         description: "Learn all you need to know to become an engineer engineer",
         price: '$67.00',
         rating: '4.8 (114 reviews)',
-    },
+    }, 
     {
         id: 3,
-        img:digital,
+        img:BI,
         title: "Business Intelligence",
         description: "Learn all you need to know to become a product designer",
         price: '$60.00',
@@ -29,7 +30,7 @@ export const AnalyticsData = [
     },
     {
         id: 4,
-        img:digital,
+        img:visual,
         title: "Data Visualization",
         description: "Learn all you need to know to become a product designer",
         price: '$60.00',

@@ -1,25 +1,45 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import "./Home.css";
 import mt from "./assets/Images/mt.png";
+import Carousel from "./testifyCarousel";
+
+
+
+// import Login from "./Login";
+
+// Data
 import { categoriesData } from "./assets/Data/categoriesData";
 import { tutorData } from "./assets/Data/tutorData";
 
 const Home = () => {
+  
+  // for the more btn to navigate to courses
+  const history = useHistory();
+  const handleButtonClick = () => {
+    history.push("/courses");
+  };
+
+  const handleSignUp = () => {
+    history.push("/SignUp");
+  };
+
+
   return (
     <>
       <div>
         <div className="heroSection">
           <div className="section1">
+            <div className="title">Fastest and Easiest way</div>
             <div className="title">
-              Fastest and Easiest way to learn online.
+              <span className="way" style={{ color: "#ffff00" }}>
+                to learn online.
+              </span>
             </div>
             <div className="text">
               Learn from our best tutors around the world in the easiest way.
             </div>
-            {/* <div>
-              <input type="text" placeholder="Search..." className="search" />
-            </div> */}
-            <div className="btn">Join for Free</div>
+            <div className="btn" onClick={handleSignUp} >Join for Free</div>
           </div>
           <div className="section2">
             <div className="bg" />
@@ -29,7 +49,7 @@ const Home = () => {
           <div className="paceText">
             <img src={mt} alt="img" className="mt" />
             <p>
-              Learning at your on pace and convenience is what we give to our
+              Learning at your own pace and convenience is what we give to our
               students. you can't afford to miss the packages we have for you.
             </p>
           </div>
@@ -41,7 +61,11 @@ const Home = () => {
               return <Categories {...items} key={items.id} />;
             })}
           </div>
-          <button className="btn_more" value="button">
+          <button
+            onClick={handleButtonClick}
+            className="btn_more"
+            value="button"
+          >
             More
           </button>
         </div>
@@ -53,6 +77,9 @@ const Home = () => {
             })}
           </div>
         </div>
+
+        {/* testimonial section */}
+          <Carousel />
         <div className="news_letter">
           <p className="news">Subscribe to our newsletter</p>
           <input type="text" placeholder="Enter your email" className="field" />

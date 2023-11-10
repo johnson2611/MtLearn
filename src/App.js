@@ -7,6 +7,19 @@ import Tutorial from "./components/Tutorial";
 import Services from "./components/Services";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/Scroll";
+
+import SignUp from "./components/SignUp";
+import LogIn from "./components/Login";
+import Log from "./components/assets/Data/Courses/Log/Log";
+import Web from "./components/assets/Data/Courses/WebDev/Web";
+
+
+// import withResponsive from "./Responsive";
+
+// const ResponsiveHome = withResponsive(Home);
+// const ResponsiveCourses = withResponsive(Courses);
+// const ResponsiveTutorial = withResponsive(Tutorial);
+// const ResponsiveLogIn = withResponsive(LogIn);
 // import {useScroll} from 'scroll-behavior';
 
 const App = () => {
@@ -23,11 +36,23 @@ const App = () => {
           <Route path="/Courses" components={Courses} exact>
             <Courses />
           </Route>
-          <Route path="/Tutoial" components={Tutorial} exact>
+          <Route path="/Tutorial" components={Tutorial} exact>
             <Tutorial />
           </Route>
           <Route path="/Services" components={Services} exact>
             <Services />
+          </Route>
+          <Route path="/SignUp" components={SignUp} exact>
+            <SignUp />
+          </Route>
+          <Route path="/LogIn" components={LogIn} exact>
+            <LogIn />
+          </Route>
+          <Route path="/Courses/Log" components={Log} exact>
+            <Log />
+          </Route>
+          <Route path="/Courses/Web" components={Web} exact>
+            <Web />
           </Route>
         </Switch>
       </Router>

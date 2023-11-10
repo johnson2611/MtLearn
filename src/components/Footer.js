@@ -1,4 +1,5 @@
 import React from "react";
+
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 function Footer() {
@@ -71,15 +72,15 @@ function Footer() {
           <span
             style={{
               color: "#fff",
-              backgroundColor: "#a09607",
-              borderRadius: "50%",
-              fontSize: "1.4rem",
-              padding: "0 5px 0 5px",
-              position: "center",
-              textAlign: "center",
+              // backgroundColor: "#a09607",
+              // borderRadius: "50%",
+              // fontSize: "1.4rem",
+              // padding: "0 5px 0 5px",
+              // position: "center",
+              // textAlign: "center",
             }}
           >
-            c
+            ©
           </span>
           <div>
             <span style={{ color: "#fff", paddingLeft: "0.8rem" }}>2023</span>

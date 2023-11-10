@@ -1,11 +1,10 @@
 import React from "react";
+import { FaStar } from "react-icons/fa";
 
 
-const Skills = () => {
+function Star ({filled, onClick}) {
     return(
-       <section className="hero">
-            <h1>Welcome to Service Page</h1>
-       </section> 
+       <FaStar color={filled ? "orange" : "lightgray"} onClick={onClick} /> 
     )
 }
-export default Skills
+export default Star

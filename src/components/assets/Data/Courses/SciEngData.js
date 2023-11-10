@@ -1,11 +1,13 @@
-import prodesign from "./Img/prodesign.png";
-import des from "./Img/des.png";
-import digital from "./Img/digital.jpg";
+import phy from "./Img/phy.jpeg";
+import chem from "./Img/chem.jpeg";
+import Bio from "./Img/Bio.jpeg";
+import mat from "./Img/mat.jpeg";
+import robo from "./Img/robo.jpg";
 
 export const SciData = [
     {
         id: 1,
-        img:des,
+        img:phy,
         title: "Physics",
         description: "Learn all you need to know to become an accountant engineer",
         price: '$60.00',
@@ -13,7 +15,7 @@ export const SciData = [
     },
     {
         id: 2,
-        img:prodesign,
+        img:chem,
         title: "Chemistry",
         description: "Learn all you need to know to become an engineer engineer",
         price: '$67.00',
@@ -21,7 +23,7 @@ export const SciData = [
     },
     {
         id: 3,
-        img:des,
+        img:Bio,
         title: "Biology",
         description: "Learn all you need to know to become a product designer",
         price: '$60.00',
@@ -29,7 +31,7 @@ export const SciData = [
     },
     {
         id: 4,
-        img:digital,
+        img:mat,
         title: "Mathematics",
         description: "Learn all you need to know to become a product designer",
         price: '$60.00',
@@ -37,7 +39,7 @@ export const SciData = [
     },
     {
         id: 5,
-        img:prodesign,
+        img:robo,
         title: "Robotics",
         description: "Learn all you need to know to become a product designer",
         price: '$60.00',

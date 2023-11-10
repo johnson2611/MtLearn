@@ -1,11 +1,11 @@
-import prodesign from "./Img/prodesign.png";
-import des from "./Img/des.png";
-import digital from "./Img/digital.jpg";
+import security from "./Img/security.jpeg";
+import net from "./Img/net.jpeg";
+import IT from "./Img/IT.jpeg";
 
 export const CyberData = [
     {
         id: 1,
-        img:des,
+        img:security,
         title: "Cybersecurity and Ethical Hacking",
         description: "Learn all you need to know to become an accountant engineer",
         price: '$60.00',
@@ -13,7 +13,7 @@ export const CyberData = [
     },
     {
         id: 2,
-        img:prodesign,
+        img:net,
         title: "Network Administration",
         description: "Learn all you need to know to become an engineer engineer",
         price: '$67.00',
@@ -21,7 +21,7 @@ export const CyberData = [
     },
     {
         id: 3,
-        img:digital,
+        img:IT,
         title: "IT Support and Troubleshooting",
         description: "Learn all you need to know to become a product designer",
         price: '$60.00',
