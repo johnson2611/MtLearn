@@ -11,7 +11,7 @@ export const progDev = [
         id: 1,
         img:dev,
         title: "Web Development",
-        description: "Learn all you need to know to become an accountant engineer",
+        description: "Learn all you need to know to become an web developer",
         price: '$60.00',
         rating: '4.8 (114 reviews)',
     },

@@ -1,12 +1,17 @@
 import React from "react";
-
+import {useHistory} from "react-router-dom";
+ 
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 function Footer() {
+  const history = useHistory();
+  const homeButtonClick = () =>{
+    history.push('/');
+  }
   return (
     <>
       <div className="footer">
-        <div className="footer-title">
+        <div className="footer-title" onClick={homeButtonClick}>
           <span className="mT">Mt</span>
           <span className="learn">Learn</span>
         </div>
@@ -67,7 +72,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div style={{ background: "#37012a" }}>
+      <div style={{ background: "#37012a" }} className="footer-bot">
         <div className="right">
           <span
             style={{
@@ -87,7 +92,7 @@ function Footer() {
             <span style={{ color: "#fff", paddingLeft: "0.8rem" }}>Mt</span>
             <span style={{ color: "#ffff00" }}>Learn</span>
           </div>
-          <div className="social">
+          <div className="social" id="social">
             <span style={{ color: "#fff", paddingLeft: "0.4rem" }}>
               <FaFacebook size={20} />
             </span>

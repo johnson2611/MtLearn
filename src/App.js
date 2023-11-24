@@ -4,24 +4,21 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Courses from "./components/assets/Data/Courses/Courset";
 import Tutorial from "./components/Tutorial";
-import Services from "./components/Services";
+import Tutor from "./components/Tutor";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/Scroll";
 
 import SignUp from "./components/SignUp";
 import LogIn from "./components/Login";
-import Log from "./components/assets/Data/Courses/Log/Log";
+
+// sub section
 import Web from "./components/assets/Data/Courses/WebDev/Web";
-
-
-// import withResponsive from "./Responsive";
-
-// const ResponsiveHome = withResponsive(Home);
-// const ResponsiveCourses = withResponsive(Courses);
-// const ResponsiveTutorial = withResponsive(Tutorial);
-// const ResponsiveLogIn = withResponsive(LogIn);
-// import {useScroll} from 'scroll-behavior';
-
+import Python from "./components/assets/Data/Courses/WebDev/python";
+import Java from "./components/assets/Data/Courses/WebDev/java";
+import Science from "./components/assets/Data/Courses/WebDev/machine";
+import Mobile from "./components/assets/Data/Courses/WebDev/mobile";
+import Block from "./components/assets/Data/Courses/WebDev/block";
+import Cloud from "./components/assets/Data/Courses/WebDev/devOps"
 const App = () => {
   return (
     <>
@@ -39,8 +36,8 @@ const App = () => {
           <Route path="/Tutorial" components={Tutorial} exact>
             <Tutorial />
           </Route>
-          <Route path="/Services" components={Services} exact>
-            <Services />
+          <Route path="/Tutor" components={Tutor} exact>
+            <Tutor />
           </Route>
           <Route path="/SignUp" components={SignUp} exact>
             <SignUp />
@@ -48,11 +45,28 @@ const App = () => {
           <Route path="/LogIn" components={LogIn} exact>
             <LogIn />
           </Route>
-          <Route path="/Courses/Log" components={Log} exact>
-            <Log />
-          </Route>
-          <Route path="/Courses/Web" components={Web} exact>
+
+          {/* Sub section */}
+          <Route path="/Web" components={Web} exact>
             <Web />
+          </Route>
+          <Route path="/Python" components={Python} exact>
+            <Python />
+          </Route>
+          <Route path="/Java" components={Java} exact>
+            <Java />
+          </Route>
+          <Route path="/Science" components={Science} exact>
+            <Science />
+          </Route>
+          <Route path="/Mobile" components={Mobile} exact>
+            <Mobile />
+          </Route>
+          <Route path="/Blockchain" components={Block} exact>
+            <Block />
+          </Route>
+          <Route path="/DevOps" components={Cloud} exact>
+            <Cloud />
           </Route>
         </Switch>
       </Router>

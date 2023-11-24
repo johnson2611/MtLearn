@@ -25,6 +25,9 @@ const Navbar = ({ handleClick }) => {
   }, [winSize]);
 
   const history = useHistory();
+  const homeButtonClick = () =>{
+    history.push('/');
+  }
   const logButtonClick = () =>{
     history.push("/Login");
   }
@@ -36,15 +39,15 @@ const Navbar = ({ handleClick }) => {
   //   undefined,
   //   (isSystemDark) => setIsDark(isSystemDark)
   // );
-  // const handleClick1 = (e) => {
-  //   const name = e.target.getAttribute("name");
-  //   if (name !== undefined || name !== null) {
-  //     setMobile(false);
-  //   }
-  // };
+  const handleClick1 = (e) => {
+    const name = e.target.getAttribute("name");
+    if (name !== undefined || name !== null) {
+      setMobile(false);
+    }
+  };
   return (
     <nav className="navbar">
-      <h3 className="logo">
+      <h3 className="logo" onClick={homeButtonClick}>
         <span className="mt">Mt</span>
         <span className="learn">Learn</span>
       </h3>
@@ -54,7 +57,12 @@ const Navbar = ({ handleClick }) => {
       icons={{ checked: "🌙", unchecked: "🔆" }}
       aria-label="Dark mode toggle"
     /> */}
-
+     <div class="box">
+          {/* search icon */}
+          <AiOutlineSearch className="scr"/>
+          <input className="search" placeholder="search..." spellcheck="true"  type="text"/>
+      </div>
+      
       <ul
         className={
           winSize <= 760
@@ -63,13 +71,8 @@ const Navbar = ({ handleClick }) => {
               : "nav-links"
             : "nav-links"
         }
-        // onClick={handleClick1}
+        onClick={handleClick1}
       >
-        <div class="box">
-          {/* search icon */}
-          <AiOutlineSearch className="scr"/>
-          <input className="search" placeholder="search..." spellcheck="false"  type="text"/>
-        </div>
         <NavLink
           exact
           activeClassName="active"
@@ -87,8 +90,8 @@ const Navbar = ({ handleClick }) => {
         <NavLink activeClassName="active" to="Tutorial" name="Tutorial">
           <li>Tutorial</li>
         </NavLink>
-        <NavLink activeClassName="active" to="/Services" name="Services">
-          <li>Services</li>
+        <NavLink activeClassName="active" to="/Tutor" name="Tutor">
+          <li>Become a Tutor</li>
         </NavLink>
         <button className="btn" onClick={logButtonClick}>Log In </button>
         {/* <button className="btn">Sign Up</button> */}

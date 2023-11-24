@@ -17,12 +17,37 @@ export default function Carousel() {
   const handleButtonCick = (card) => {
     if (card.title === "Web Development") {
       history.push({
-        pathname: "/Courses/Web",
+        pathname: "/Web",
         state: { detail: card },
       });
     } else if (card.title === "Python Programming") {
       history.push({
-        pathname: "/Courses/Log",
+        pathname: "/Python",
+        state: {detail: card},
+      });
+    } else if (card.title === "Java Programming") {
+      history.push({
+        pathname: "/Java",
+        state: {detail: card},
+      });
+    } else if (card.title === "Data Science and Machine Learning") {
+      history.push({
+        pathname: "/Science",
+        state: {detail: card},
+      });
+    } else if (card.title === "Mobile App Development") {
+      history.push({
+        pathname: "/Mobile",
+        state: {detail: card},
+      });
+    } else if (card.title === "Blockchain Development") {
+      history.push({
+        pathname: "/BlockChain",
+        state: {detail: card},
+      });
+    } else if (card.title === "DevOps and Cloud Computing") {
+      history.push({
+        pathname: "/DevOps",
         state: {detail: card},
       });
     }

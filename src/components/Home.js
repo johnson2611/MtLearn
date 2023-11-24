@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import "./Home.css";
 import mt from "./assets/Images/mt.png";
 import Carousel from "./testifyCarousel";
-
+import Typewriter from "../Type";
 
 
 // import Login from "./Login";
@@ -30,16 +30,17 @@ const Home = () => {
       <div>
         <div className="heroSection">
           <div className="section1">
-            <div className="title">Fastest and Easiest way</div>
+            <div className="title"><Typewriter text='Fastest and Easiest way' delay={200}/></div>
             <div className="title">
               <span className="way" style={{ color: "#ffff00" }}>
-                to learn online.
+              <Typewriter text="to learn online." delay={400} />
+                
               </span>
             </div>
             <div className="text">
-              Learn from our best tutors around the world in the easiest way.
+              <Typewriter text="Learn from our best tutors around the world in the easiest way" delay={200} />.
             </div>
-            <div className="btn" onClick={handleSignUp} >Join for Free</div>
+            <div className="btn"  style={{ color: "#ffff00" }}  onClick={handleSignUp} >Join for Free</div>
           </div>
           <div className="section2">
             <div className="bg" />
@@ -51,7 +52,7 @@ const Home = () => {
             <p>
               Learning at your own pace and convenience is what we give to our
               students. you can't afford to miss the packages we have for you.
-            </p>
+            </p>  
           </div>
         </div>
         <div className="collection">
